@@ -1,0 +1,212 @@
+@import url();
+:root{
+ --font-p: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ --font-s: 'banhscrift', 'Arial Narrow', Arial, sans-serif;
+}
+html *{
+    text-decoration: none;
+    color: #080a0d;
+    font-size: 18px;
+}
+h1,h2,h3{
+    font-family: var(--font-p);
+}
+p,a{
+    font-family: var(--font-s);
+}
+header {
+    background-color: #003e8c;
+    padding: 0.25rem;
+    margin: -1rem -.5rem .1rem -1rem;
+}
+.nav-bar {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;        
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 2; 
+}
+.logo img {
+    max-width: 45px;
+    height: auto;     
+    display: block;
+    border: solid 1px transparent;
+    border-radius: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    gap: 20px;
+    grid-area: 1 / 2 / 2 / 9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: var(--font-p);
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    background-color: #8db3d9;
+    color: #080a0d;
+    font-size: 18px;
+    border: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition:0.5s;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    background-color: #ffffff;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; 
+    grid-template-rows: 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 0px;
+    position: relative;
+    z-index: 2; 
+    height: 100%;
+}
+
+.AVA-container {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: -.5rem;
+    padding: 2rem;
+    background-image: url(/img/muestra_01.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(16, 45, 114, 0.3);
+    background-blend-mode: multiply;
+}
+
+.Instalaciones-container {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-right: -.5rem;
+    background: url(/img/muestra-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(16, 45, 114, 0.3);
+    background-blend-mode: multiply;
+}
+
+.AVA-container h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.AVA-container h2{
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
+}
+.AVA-container a {
+    background-color: #8db3d9;
+    color: #080a0d;
+    font-size: 18px;
+    border: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+  }
+.AVA-container a:hover {
+    background-color: #ffffff;
+    color: #080a0d;
+    border: #080a0d;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 1%;
+}
+
+.Instalaciones-container h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.Instalaciones-container h2{
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
+}
+.Instalaciones-container a {
+  background-color: #8db3d9;
+  color: #080a0d;
+  font-size: 18px;
+  border: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+}
+.Instalaciones-container a:hover {
+    background-color: #ffffff;
+    color: #080a0d;
+    border: #080a0d;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 2%;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 500px; 
+    }
+    .hero-content {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 10px; 
+    }
+    .AVA-container{
+        grid-area: 1/1/2/2;
+        justify-content: center;
+        align-items: center;
+    }
+    .Instalaciones-container{
+        grid-area: 2/1/3/2;
+    }
+    .AVA-container h1{
+        font-size: 2.5rem;
+    }
+    .AVA-container h2{
+        font-size: 1.2rem;
+    }
+    .Instalaciones-container h1{
+        font-size: 2.5rem;
+    }
+}
