@@ -21,7 +21,7 @@ a {
 }
 header {
   background-color: #003e8c;
-  padding: 0.25rem;
+  padding: 1.3rem;
 }
 .logo-q{
     display: none;
@@ -69,8 +69,8 @@ header {
   font-style: normal;
   text-align: center;
   text-decoration: none;
-  background-color: #8db3d9;
-  color: #080a0d;
+  background-color: #fff;
+  color: #003e8c;
   font-size: 18px;
   border: #ffffff;
   border-radius: 10px;
