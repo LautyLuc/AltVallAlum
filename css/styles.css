@@ -101,6 +101,7 @@ header {
   justify-content: center;
   align-items: start;
   margin-left: -0.5rem;
+  margin-bottom: 0.5%;
   padding: 2rem;
   background-image: url(/img/muestra_01.png);
   background-size: cover;
@@ -117,7 +118,7 @@ header {
   justify-content: center;
   align-items: end;
   padding: 2rem;
-  margin-right: -0.5rem;
+  margin-bottom: 1%;
   background: url(/img/muestra-02.jpg);
   background-size: cover;
   background-position: center;
@@ -197,13 +198,12 @@ header {
 }
 
 .marcas{
-  margin-top: 1rem;
+  margin: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #8db3d9;
-
 }
 
 .marcas-container h2{
@@ -223,7 +223,7 @@ header {
 
 .marcas img{
   max-width: 100px;
-  height: 3rem;
+  height: 2.8rem;
 }
 
 .info {
@@ -262,6 +262,13 @@ header {
   gap : 1rem;
   padding-left: 1rem;
   border-bottom-left-radius: 5px;
+}
+
+.form-items{
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
 }
 
 .map{
