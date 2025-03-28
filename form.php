@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Email details
-    $to = "tuemail@ejemplo.com"; // Replace with your email
+    $to = "lauluc004@gmail.com"; // Replace with your email
     $headers = "From: $email\r\n" .
                "Reply-To: $email\r\n" .
                "Content-Type: text/plain; charset=UTF-8\r\n";
