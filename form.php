@@ -1,31 +1,35 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $asnt = $_POST['asunto'];
-    $mensaje = $_POST['mensaje'];
-
-    $cuerpo = "Correo recibido de: " . $nombre . " \r\n";
-    $cuerpo .= "Correo: " . $correo . " \r\n";
-    $cuerpo .= "Asunto: " . $asnt . " \r\n";
-    $cuerpo .= "Mensaje: " . $mensaje . " \r\n";
-    $cuerpo .= "enviado el " . date('d/m/Y', time());
-
-    $destinatario = 'lauluc004@gmail.com';
-
-    $headers = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\r\n";
-    $headers .= "From: $nombre <$correo>\r\n";
-    $headers .= "Reply-To: $correo\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-
-    if (!mail($destinatario, $asnt, $cuerpo, $headers)) {
-        // Handle the error if mail sending fails
-        echo "Error sending email.";
-        exit; // Stop further execution
+    // Sanitize input data
+    $nombre = htmlspecialchars(trim($_POST['nombre']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $asunto = htmlspecialchars(trim($_POST['asunto']));
+    $mensaje = htmlspecialchars(trim($_POST['mensaje']));
+    
+    // Validation
+    if (empty($nombre) || empty($email) || empty($asunto) || empty($mensaje)) {
+        echo "<p style='color: red;'>Todos los campos son obligatorios.</p>";
+        exit;
     }
-
-    header('Location: index.html');
-    exit;
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<p style='color: red;'>Correo electrónico inválido.</p>";
+        exit;
+    }
+    
+    // Email details
+    $to = "tuemail@ejemplo.com"; // Replace with your email
+    $headers = "From: $email\r\n" .
+               "Reply-To: $email\r\n" .
+               "Content-Type: text/plain; charset=UTF-8\r\n";
+    $body = "Nombre: $nombre\nCorreo: $email\nAsunto: $asunto\nMensaje:\n$mensaje";
+    
+    // Send email
+    if (mail($to, $asunto, $body, $headers)) {
+        echo "<p style='color: green;'>Mensaje enviado con éxito.</p>";
+    } else {
+        echo "<p style='color: red;'>Error al enviar el mensaje.</p>";
+    }
+} else {
+    echo "<p style='color: red;'>Acceso no permitido.</p>";
 }
 ?>
