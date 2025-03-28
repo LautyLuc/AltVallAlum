@@ -261,6 +261,7 @@ header {
   height: 500px;
   gap : 1rem;
   padding-left: 1rem;
+  padding-right: 5rem;
   border-bottom-left-radius: 5px;
 }
 
@@ -269,6 +270,16 @@ header {
   border-radius: 5px;
   text-decoration: none;
   display: flex;
+}
+
+.form button{
+  background-color: #fff;
+  color: #003e8c;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .map{
