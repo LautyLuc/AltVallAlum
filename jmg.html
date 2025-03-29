@@ -15,7 +15,7 @@
             <div class="logo">
                 <a href="index.html"><img src="/img/FONDO-BL.jpg" alt="Logo"></a>
             </div>
-            <div class="logo-q"><img src="img/LOGO-full.png" alt=""></div>
+            <a id="logo-q" class="logo-q" href="index.html"><img src="img/LOGO-full.png" alt="Logo JMG"></a>
             <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
             <div class="wrap_nav-ul" id="nav">
                 <ul class="nav-links">
@@ -30,14 +30,14 @@
     <section class="hero hero-bar-active">
         <div class="hero-content">
             <div class="AVA-container">
-                <h1>Alto Valle Aluminios</h1>
-                <h2>Aberturas de aluminio en el alto valle</h2>
-                <a href="">Servicios</a>
-            </div>
-            <div class="Instalaciones-container">
                 <h1>JMG</h1>
                 <h2>Construcciones</h2>
-                <a class="JMG-btn" href="#">Contactame</a>
+                <a href="">Contacto</a>
+            </div>
+            <div class="Instalaciones-container">
+                <h1>Alto Valle Aluminios</h1>
+                <h2>Aberturas de Aluminio</h2>
+                <a class="JMG-btn" href="#">Servicios</a>
             </div>
         </div>
     </section>
@@ -54,7 +54,7 @@
     </section>
     <section class="info">
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.1255988225366!2d-68.03261024568513!3d-38.966799985854614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a319147986261%3A0xa14505b1cedd766!2sCoronel%20Belisle%201999-2099%2C%20Q8302DSG%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1743038037827!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.1255988225366!2d-68.03261024568513!3d-38.966799985854614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a319147986261%3A0xa14505b1cedd766!2sCoronel%20Belisle%201999-2099%2C%20Q8302DSG%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1743038037827!5m2!1ses!2sar"></iframe>
         </div>
         <div class="form-container">
         <h1 class="h1-info">Nosotros</h1>
@@ -86,5 +86,24 @@
         </div>
     </footer>
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCbLq60fRQiwUGimhF7TvU42dcaYSrTb8c",
+      authDomain: "alalvall-9f81c.firebaseapp.com",
+      projectId: "alalvall-9f81c",
+      storageBucket: "alalvall-9f81c.firebasestorage.app",
+      messagingSenderId: "823899874042",
+      appId: "1:823899874042:web:54211734c9ce96280cdf43"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 <script src="app.js"></script>
 </html>

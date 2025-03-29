@@ -228,13 +228,13 @@ header {
   display: flex;
   align-items: center;
   height: 100px;
-  gap: 15rem;
+  gap: 10rem;
   padding: 1rem;
 }
 
 .marcas img{
-  max-width: 100px;
-  height: 4rem;
+  max-width: 80px;
+  height: 3rem;
 }
 
 .info {
@@ -293,6 +293,7 @@ header {
 }
 
 .map{
+
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -302,8 +303,13 @@ header {
   padding: 1rem;
 }
 
+.map iframe{
+  width: 100%;
+  height: 500px;
+}
+
 footer {
-  background-color: var(--color-2); /* Match header color */
+  background-color: var(--color-2); 
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -347,7 +353,7 @@ footer {
   color: var(--color-1);
 }
 
-/* Responsive styles for smaller screens */
+
 @media (max-width: 768px) {
   .footer-links {
       flex-direction: column;
@@ -400,8 +406,8 @@ footer {
    bottom: 0;
    background-color: var(--color-1);
    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add this line */
-   transform: translateX(10%); /* Changed from 5 to 100% */
+   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+   transform: translateX(10%);
  }
  
  .wrap_nav-ul.active {
@@ -431,8 +437,8 @@ footer {
    align-items: center;
    flex-direction: column;
    gap: 2rem;
-   position: relative; /* Add this line */
-   z-index: 10; /* Add this line */
+   position: relative; 
+   z-index: 10; 
  }
  .nav-links a {
    background-color: transparent;
@@ -500,7 +506,6 @@ footer {
 ;
   }
 
-  /* Styles for .marcas */
   .marcas {
     margin-top: 60px;
   }

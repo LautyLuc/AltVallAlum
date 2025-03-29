@@ -89,6 +89,22 @@ header {
   color: #080a0d;
 }
 
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(0, 62, 140, 0.9); /* Slightly transparent background */
+  z-index: 100; /* Ensure it's above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: background-color .5s ease-in-out; /* Smooth transition */
+  transform: translateY(0); /* Slide down */
+  opacity: 1; /* Fully visible */
+}
+
+
 .hero-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
