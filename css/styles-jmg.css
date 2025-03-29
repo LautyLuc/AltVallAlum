@@ -2,9 +2,9 @@
 :root {
   --font-p: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   --font-s: "banhscrift", "Arial Narrow", Arial, sans-serif;
-  --color-1: #8db3d9;
-  --color-2: #003e8c;
-  --color-3: #080a0d;
+  --color-1: #a43030;
+  --color-2: #800000;
+  --color-3: #6a6a6a;
   --color-4: #fff;
 }
 html * {
@@ -14,6 +14,11 @@ html * {
   color: #080a0d;
   font-size: 18px;
 }
+
+body {
+    background-color: var(--color-2);
+}
+
 h1,
 h2,
 h3 {
@@ -24,7 +29,7 @@ a {
   font-family: var(--font-s);
 }
 header {
-  background-color: #003e8c;
+  background-color: var(--color-2);
   padding: 1.3rem;
 }
 .logo-q{
@@ -75,7 +80,7 @@ header {
   text-align: center;
   text-decoration: none;
   background-color: #fff;
-  color: #003e8c;
+  color: var(--color-2);
   font-size: 18px;
   border: #ffffff;
   border-radius: 10px;
@@ -85,7 +90,7 @@ header {
 }
 
 .nav-links a:hover {
-  background-color: #8db3d9;
+  background-color: var(--color-1);
   color: #080a0d;
 }
 
@@ -109,7 +114,7 @@ header {
   margin-left: -0.5rem;
   margin-bottom: 0.5%;
   padding: 2rem;
-  background-image: url(/img/muestra_01.png);
+  background-image: url(/img/muestra-02.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,7 +130,7 @@ header {
   align-items: end;
   padding: 2rem;
   margin-bottom: 1%;
-  background: url(/img/muestra-02.jpg);
+  background: url(/img/muestra_01.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -147,7 +152,7 @@ header {
   font-weight: bold;
 }
 .AVA-container a {
-  background-color: #8db3d9;
+  background-color: var(--color-4);
   color: #080a0d;
   font-size: 18px;
   border: #ffffff;
@@ -158,7 +163,7 @@ header {
   font-weight: bold;
 }
 .AVA-container a:hover {
-  background-color: #ffffff;
+  background-color: var(--color-1);
   color: #080a0d;
   border: #080a0d;
   transition: 0.5s;
@@ -180,7 +185,7 @@ header {
   font-weight: bold;
 }
 .Instalaciones-container a {
-  background-color: #8db3d9;
+  background-color: var(--color-4);
   color: #080a0d;
   font-size: 18px;
   border: #ffffff;
@@ -191,7 +196,7 @@ header {
   font-weight: bold;
 }
 .Instalaciones-container a:hover {
-  background-color: #ff0000;
+  background-color: #8db3d9;
   color: #080a0d;
   border: #080a0d;
   transition: 0.5s;
@@ -209,7 +214,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #8db3d9;
+  background-color: var(--color-1);
 }
 
 .marcas-container h2{
@@ -244,7 +249,7 @@ header {
     font-family: var(--font-s);
     font-size: x-large;
     padding: 1rem;
-    background-color: #8db3d9;
+    background-color: var(--color-1);
     display: flex;
     align-items: center;
     justify-content: start;
@@ -255,14 +260,14 @@ header {
     align-items: center;
     justify-content: start;
     padding-left: 1rem;
-    background-color: #8db3d9;
+    background-color: var(--color-1);
 }
 
 .form{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #8db3d9;
+  background-color: var(--color-1);
   width: 100%;
   height: 500px;
   gap : 1rem;
@@ -279,7 +284,7 @@ header {
 
 .form button{
   background-color: #fff;
-  color: #003e8c;
+  color: var(--color-2);
   font-size: 18px;
   font-weight: bold;
   display: flex;
@@ -291,14 +296,14 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  background-color: #8db3d9;
+  background-color: var(--color-1);
   width: 100%;
   gap : 1rem;
   padding: 1rem;
 }
 
 footer {
-  background-color: #003e8c; /* Match header color */
+  background-color: var(--color-2); /* Match header color */
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -339,7 +344,7 @@ footer {
   font-size: 20px;
 }
 .social-icons a:hover{
-  color: #8db3d9;
+  color: var(--color-1);
 }
 
 /* Responsive styles for smaller screens */
@@ -370,14 +375,14 @@ footer {
    width: 100%;
    align-items: end;
    justify-content: space-between;
-   background-color: #8db3d9;   
+   background-color: var(--color-1);   
 
 }
 
  .abrir-menu{
    width: 50px;
    margin-bottom: .5rem;
-   background-color:#8db3d9;
+   background-color:var(--color-1);
    border: transparent solid;
    border-radius: 10px;
 }
@@ -393,7 +398,7 @@ footer {
    top: 0;
    right: 0;
    bottom: 0;
-   background-color: #8db3d9;
+   background-color: var(--color-1);
    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add this line */
    transform: translateX(10%); /* Changed from 5 to 100% */
