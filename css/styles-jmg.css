@@ -16,7 +16,7 @@ html * {
 }
 
 body {
-    background-color: var(--color-2);
+    background-color: var(--color-1);
 }
 
 h1,
@@ -114,7 +114,7 @@ header {
   margin-left: -0.5rem;
   margin-bottom: 0.5%;
   padding: 2rem;
-  background-image: url(/img/muestra-02.jpg);
+  background-image: url(/img/muestra_04.avif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@ header {
   align-items: end;
   padding: 2rem;
   margin-bottom: 1%;
-  background: url(/img/muestra_01.png);
+  background: url(/img/photo-1620146095929-d2ce4813b04c.avif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,6 +215,7 @@ header {
   align-items: center;
   justify-content: center;
   background-color: var(--color-1);
+  border-bottom: solid 5px var(--color-2);
 }
 
 .marcas-container h2{
@@ -222,6 +223,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  color: #fff;
 }
 
 .marcas-logos{
@@ -407,7 +409,7 @@ footer {
    background-color: var(--color-1);
    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
-   transform: translateX(10%);
+   transform: translateX(.1%);
  }
  
  .wrap_nav-ul.active {
