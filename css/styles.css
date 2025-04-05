@@ -207,6 +207,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
   width: 100%;
   background-color: #8db3d9;
 }
@@ -220,18 +221,24 @@ header {
 
 .marcas-logos{
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10rem;
   height: 100px;
   width: 100%;
 }
 
-.marcas img{
-  justify-content: space-around;
-  width: 7rem;
-  height: auto;
-  padding: 5px;
+.marcas-logos2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+  height: 100px;
+  width: 100%;
+}
+
+.img-lm{
+  width: 120px;
 }
 
 .info {
