@@ -8,3 +8,34 @@ if(emailInput.value.trim()===''){isValid=!1;alert('Por favor, ingresa tu correo 
 if(messageInput.value.trim()===''){isValid=!1;alert('Por favor, ingresa un mensaje.')}
 if(!isValid){event.preventDefault()}});function isValidEmail(email){const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;return emailRegex.test(email)}
 document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'})})});document.addEventListener('DOMContentLoaded',function(){const dropdownTriggers=document.querySelectorAll('.dropdown-trigger');dropdownTriggers.forEach(trigger=>{const dropdownContent=trigger.nextElementSibling;dropdownContent.style.display='none';trigger.addEventListener('click',function(){this.classList.toggle('active');const content=this.nextElementSibling;if(content.style.display==='none'||content.style.display===''){content.style.display='block'}else{content.style.display='none'}})})})
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch("enviar.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    document.getElementById("modalText").innerText = result;
+    document.getElementById("popupModal").style.display = "block";
+    document.getElementById("contactForm").reset();
+  })
+  .catch(() => {
+    document.getElementById("modalText").innerText = "Ocurrió un error al enviar el mensaje ❌";
+    document.getElementById("popupModal").style.display = "block";
+  });
+});
+
+document.querySelector(".close-btn").onclick = function() {
+  document.getElementById("popupModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("popupModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
