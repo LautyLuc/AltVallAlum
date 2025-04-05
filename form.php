@@ -12,7 +12,7 @@ $formcontent="
     E-mail: $email \n
 ";
 
-$recipient = "lauluc004@gmail.com";
+$recipient = "contacto@altovallealuminios.com";
 
 $header = "From: $email \r\n";
 $header .= "Content-Type: text/plain; charset=UTF-8";
