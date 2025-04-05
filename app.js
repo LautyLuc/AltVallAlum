@@ -11,6 +11,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+      const wrapper = btn.nextElementSibling;
+      wrapper.classList.toggle('active');
+  });
+});
+
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
   if (window.scrollY > 100) { 
@@ -141,3 +148,31 @@ anchor.addEventListener('click', function (e) {
       });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all dropdown triggers
+  const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+  
+  // Add click event listener to each trigger
+  dropdownTriggers.forEach(trigger => {
+    // Initially hide all dropdown contents
+    const dropdownContent = trigger.nextElementSibling;
+    dropdownContent.style.display = 'none';
+    
+    trigger.addEventListener('click', function() {
+      // Toggle active class on the trigger
+      this.classList.toggle('active');
+      
+      // Get the dropdown content
+      const content = this.nextElementSibling;
+      
+      // Toggle display
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    });
+  });
+});
+

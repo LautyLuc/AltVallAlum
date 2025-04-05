@@ -357,19 +357,16 @@ footer {
   color: #8db3d9;
 }
 
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-  .footer-links {
-      flex-direction: column;
-      gap: 10px;
-  }
-}
-
 @media (max-width: 768px) {
 
   header {
     padding: .5rem;
   }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+}
 
   .abrir-menu,
   .cerrar-menu {
