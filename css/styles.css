@@ -205,7 +205,6 @@ header {
 .marcas{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: var(--color-1);
   margin: 1rem 0 1rem 0;
@@ -222,7 +221,6 @@ header {
 }
 
 .logos-marcas{
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -231,18 +229,16 @@ header {
 .marcas-uno{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: 10rem;
-  padding-top: 1rem;
+  padding: 1rem;
+  gap: 40vh;
 }
 .marcas-dos{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: 12rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
+  gap: 40vh;
 }
 
 .info {
@@ -306,8 +302,14 @@ header {
   justify-content: start;
   background-color: #8db3d9;
   width: 100%;
+  height: 100%;
   gap : 1rem;
   padding: 1rem;
+}
+
+.map iframe{
+  width: 100%;
+  height: 100%;
 }
 
 footer {
