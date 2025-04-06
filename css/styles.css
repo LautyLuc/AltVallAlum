@@ -203,32 +203,46 @@ header {
 }
 
 .marcas{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 4px;
-  background-color: #8db3d9;
-  width: 100%;
-  height: auto;
-  gap : 1rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-1);
   margin: 1rem 0 1rem 0;
 }
 
 .marcas h2{
-  font-size: 2rem;
-  text-align: center;
-  color: var(--color-3);
-  font-weight: bold;
-  grid-area: 1 / 1 / 2 / 4; 
+  font-family: var(--font-s);
+  font-size: x-large;
+  padding: 1rem;
+  background-color: #8db3d9;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .logos-marcas{
-  grid-area: 2 / 1 / 4 / 4;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.marcas-uno{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  padding-top: 1rem;
+}
+.marcas-dos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  padding-bottom: 1rem;
 }
 
 .info {
